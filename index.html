@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador de Times de Futebol</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts para uma tipografia moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>⚽ Sorteador de Times</h1>
+            <p>Monte seus times de forma rápida e aleatória</p>
+        </header>
+
+        <!-- PAINEL DE CONTROLE / ENTRADA -->
+        <section class="painel">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="playerInput" 
+                    placeholder="Nome do jogador..." 
+                    maxlength="25"
+                    onkeypress="if(event.key === 'Enter') adicionarJogador()"
+                >
+                <button id="addButton" onclick="adicionarJogador()">Adicionar</button>
+            </div>
+
+            <div class="acoes-lote">
+                <button id="randomNamesButton" class="btn-secundario" onclick="adicionarNomesAleatorios()">Gerar 20 Nomes Aleatórios</button>
+                <button id="clearButton" class="btn-perigo" onclick="limparTudo()">Limpar Tudo</button>
+            </div>
+        </section>
+
+        <!-- LISTA DE JOGADORES -->
+        <section class="jogadores-section">
+            <div class="header-lista">
+                <h2>Lista de Jogadores</h2>
+                <span class="contador-badge"><span id="playerCount">0</span>/20</span>
+            </div>
+
+            <div id="playerList" class="player-list">
+                <p class="vazio">Nenhum jogador adicionado.</p>
+            </div>
+
+            <button id="drawButton" class="btn-principal" onclick="sortearTimes()" disabled>
+                🎲 SORTEAR TIMES (0/20)
+            </button>
+        </section>
+
+        <!-- RESULTADO DOS TIMES -->
+        <section class="resultado-section">
+            <h2>Times Sorteados</h2>
+            <div id="teamsContainer" class="teams-grid">
+                <div class="resultado-vazio">
+                    <span>⚽</span>
+                    <p>Os times aparecerão aqui.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Script JavaScript (certifique-se de salvar o JS como script.js ou colocar o código dentro de uma tag <script>) -->
+    <script src="script.js"></script>
+</body>
+</html>

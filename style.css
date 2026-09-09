@@ -1,0 +1,268 @@
+/* =========================================
+   ESTILOS GLOBAIS E VARIÁVEIS
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   PAINEL DE ENTRADA
+========================================= */
+.painel {
+    margin-bottom: 25px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #1e88e5;
+}
+
+.input-group button, .btn-principal {
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.input-group button:hover, .btn-principal:hover:not(:disabled) {
+    background-color: #1565c0;
+}
+
+.acoes-lote {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-secundario {
+    flex: 1;
+    background-color: #f0f4f8;
+    color: #333;
+    border: 1px solid #d0d7de;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-secundario:hover {
+    background-color: #e2e8f0;
+}
+
+.btn-perigo {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-perigo:hover {
+    background-color: #ffcdd2;
+}
+
+/* =========================================
+   LISTA DE JOGADORES
+========================================= */
+.jogadores-section {
+    margin-bottom: 30px;
+}
+
+.header-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.header-lista h2 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.contador-badge {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.player-list {
+    max-height: 180px;
+    overflow-y: auto;
+    border: 2px dashed #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.jogador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9fbfd;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #edf2f7;
+    font-size: 0.95rem;
+}
+
+.jogador .remover {
+    background: none;
+    border: none;
+    color: #e53935;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.jogador .remover:hover {
+    background-color: #ffebee;
+}
+
+.vazio {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    padding: 15px;
+}
+
+.btn-principal {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.btn-principal:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* =========================================
+   RESULTADO / TIMES SORTEADOS
+========================================= */
+.resultado-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.resultado-vazio {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    color: #777;
+}
+
+.resultado-vazio span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Estilo para os cards de times gerados pelo JS */
+.time-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.time-card h3 {
+    color: white;
+    padding: 10px 15px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.time-card ul {
+    list-style: none;
+    padding: 12px 15px;
+}
+
+.time-card li {
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+}
+
+.time-card li:last-child {
+    border-bottom: none;
+}
