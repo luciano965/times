@@ -1,6 +1,7 @@
 /* =========================================
-   ESTILOS GLOBAIS E VARIÁVEIS
+   ESTILOS GLOBAIS
 ========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,260 +10,722 @@
 }
 
 body {
-    background-color: #f4f7f6;
+    background:
+        linear-gradient(135deg, #4facfe, #00f2fe);
     color: #333;
+
     display: flex;
     justify-content: center;
+
     padding: 20px;
+
     min-height: 100vh;
 }
+
+
+/* =========================================
+   CONTAINER
+========================================= */
 
 .container {
     width: 100%;
     max-width: 800px;
-    background: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #e8f4ff
+        );
+
     padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    border-radius: 20px;
+
+    border: 3px solid rgba(255,255,255,0.6);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.20);
 }
+
+
+/* =========================================
+   HEADER
+========================================= */
 
 header {
     text-align: center;
     margin-bottom: 25px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #667eea,
+            #764ba2
+        );
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(102,126,234,0.3);
 }
 
 header h1 {
-    color: #1a1a1a;
+    color: white;
+
     font-size: 1.8rem;
+
     margin-bottom: 5px;
 }
 
 header p {
-    color: #666;
+    color: #eee;
+
     font-size: 0.9rem;
 }
+
 
 /* =========================================
    PAINEL DE ENTRADA
 ========================================= */
+
 .painel {
     margin-bottom: 25px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #e0e7ff
+        );
+
+    border: 2px solid #bfdbfe;
 }
+
+
+/* =========================================
+   INPUT
+========================================= */
 
 .input-group {
     display: flex;
+
     gap: 10px;
+
     margin-bottom: 12px;
 }
 
 .input-group input {
     flex: 1;
+
     padding: 12px 16px;
-    border: 2px solid #e0e0e0;
+
+    border: 2px solid #93c5fd;
+
     border-radius: 8px;
+
     font-size: 1rem;
+
     outline: none;
-    transition: border-color 0.2s;
+
+    background-color: #ffffff;
+
+    color: #333;
+
+    transition: 0.2s;
 }
 
 .input-group input:focus {
-    border-color: #1e88e5;
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99,102,241,0.15);
 }
 
-.input-group button, .btn-principal {
-    background-color: #1e88e5;
+
+/* =========================================
+   BOTÃO ADICIONAR
+========================================= */
+
+.input-group button,
+.btn-principal {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
     color: white;
+
     border: none;
+
     padding: 12px 20px;
+
     border-radius: 8px;
+
     font-weight: 600;
+
     cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
+
+    transition:
+        background 0.2s,
+        transform 0.1s;
+
+    box-shadow:
+        0 5px 15px rgba(37,99,235,0.25);
 }
 
-.input-group button:hover, .btn-principal:hover:not(:disabled) {
-    background-color: #1565c0;
+.input-group button:hover,
+.btn-principal:hover:not(:disabled) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #1d4ed8,
+            #6d28d9
+        );
+
+    transform: translateY(-2px);
 }
+
+
+/* =========================================
+   AÇÕES
+========================================= */
 
 .acoes-lote {
     display: flex;
+
     gap: 10px;
 }
 
 .btn-secundario {
     flex: 1;
-    background-color: #f0f4f8;
-    color: #333;
-    border: 1px solid #d0d7de;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d1fae5,
+            #a7f3d0
+        );
+
+    color: #065f46;
+
+    border: 1px solid #6ee7b7;
+
     padding: 10px;
+
     border-radius: 8px;
+
     font-weight: 500;
+
     cursor: pointer;
-    transition: background-color 0.2s;
+
+    transition: 0.2s;
 }
 
 .btn-secundario:hover {
-    background-color: #e2e8f0;
+    background:
+        linear-gradient(
+            135deg,
+            #a7f3d0,
+            #6ee7b7
+        );
+
+    transform: translateY(-2px);
 }
 
+
+/* =========================================
+   BOTÃO PERIGO
+========================================= */
+
 .btn-perigo {
-    background-color: #ffebee;
-    color: #c62828;
-    border: 1px solid #ffcdd2;
+    background:
+        linear-gradient(
+            135deg,
+            #fee2e2,
+            #fecaca
+        );
+
+    color: #b91c1c;
+
+    border: 1px solid #fca5a5;
+
     padding: 10px 15px;
+
     border-radius: 8px;
+
     font-weight: 500;
+
     cursor: pointer;
-    transition: background-color 0.2s;
+
+    transition: 0.2s;
 }
 
 .btn-perigo:hover {
-    background-color: #ffcdd2;
+    background:
+        linear-gradient(
+            135deg,
+            #fecaca,
+            #fca5a5
+        );
+
+    transform: translateY(-2px);
 }
+
 
 /* =========================================
    LISTA DE JOGADORES
 ========================================= */
+
 .jogadores-section {
     margin-bottom: 30px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fef3c7,
+            #fde68a
+        );
+
+    border: 2px solid #fcd34d;
 }
 
 .header-lista {
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     margin-bottom: 12px;
 }
 
 .header-lista h2 {
     font-size: 1.2rem;
-    color: #333;
+
+    color: #78350f;
 }
 
+
+/* =========================================
+   CONTADOR
+========================================= */
+
 .contador-badge {
-    background-color: #e3f2fd;
-    color: #1565c0;
-    padding: 4px 10px;
+    background:
+        linear-gradient(
+            135deg,
+            #f97316,
+            #ef4444
+        );
+
+    color: white;
+
+    padding: 5px 12px;
+
     border-radius: 20px;
+
     font-size: 0.85rem;
+
     font-weight: 600;
+
+    box-shadow:
+        0 4px 10px rgba(239,68,68,0.25);
 }
+
+
+/* =========================================
+   LISTA
+========================================= */
 
 .player-list {
     max-height: 180px;
+
     overflow-y: auto;
-    border: 2px dashed #e0e0e0;
+
+    border: 2px dashed #f59e0b;
+
     border-radius: 8px;
+
     padding: 10px;
+
     margin-bottom: 15px;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 8px;
+
+    background:
+        rgba(255,255,255,0.55);
 }
+
+
+/* =========================================
+   JOGADOR
+========================================= */
 
 .jogador {
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
-    background: #f9fbfd;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #fef9c3
+        );
+
     padding: 8px 12px;
+
     border-radius: 6px;
-    border: 1px solid #edf2f7;
+
+    border: 1px solid #fde68a;
+
     font-size: 0.95rem;
+
+    transition: 0.2s;
 }
 
+.jogador:hover {
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #fde68a
+        );
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   REMOVER
+========================================= */
+
 .jogador .remover {
-    background: none;
+    background:
+        #fee2e2;
+
     border: none;
-    color: #e53935;
+
+    color: #dc2626;
+
     cursor: pointer;
+
     font-size: 1rem;
-    padding: 2px 6px;
-    border-radius: 4px;
-    transition: background 0.2s;
+
+    padding: 4px 8px;
+
+    border-radius: 5px;
+
+    transition: 0.2s;
 }
 
 .jogador .remover:hover {
-    background-color: #ffebee;
+    background: #ef4444;
+
+    color: white;
 }
+
+
+/* =========================================
+   VAZIO
+========================================= */
 
 .vazio {
     text-align: center;
-    color: #888;
+
+    color: #92400e;
+
     font-size: 0.9rem;
+
     padding: 15px;
 }
 
+
+/* =========================================
+   BOTÃO PRINCIPAL
+========================================= */
+
 .btn-principal {
     width: 100%;
-    padding: 14px;
+
+    padding: 15px;
+
     font-size: 1rem;
+
     margin-top: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f97316,
+            #ec4899,
+            #8b5cf6
+        );
+
+    background-size: 200% 200%;
+
+    animation: cores 5s ease infinite;
+}
+
+@keyframes cores {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .btn-principal:disabled {
-    background-color: #ccc;
+    background: #9ca3af;
+
     cursor: not-allowed;
+
+    animation: none;
+
+    box-shadow: none;
 }
+
 
 /* =========================================
-   RESULTADO / TIMES SORTEADOS
+   RESULTADO
 ========================================= */
-.resultado-section h2 {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-    color: #333;
+
+.resultado-section {
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ede9fe,
+            #fce7f3
+        );
+
+    border: 2px solid #c4b5fd;
 }
 
+.resultado-section h2 {
+
+    font-size: 1.2rem;
+
+    margin-bottom: 12px;
+
+    color: #581c87;
+}
+
+
+/* =========================================
+   GRID DOS TIMES
+========================================= */
+
 .teams-grid {
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
+
     gap: 15px;
 }
 
+
+/* =========================================
+   RESULTADO VAZIO
+========================================= */
+
 .resultado-vazio {
+
     grid-column: 1 / -1;
+
     text-align: center;
+
     padding: 30px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    border: 1px solid #eee;
-    color: #777;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #e0f2fe
+        );
+
+    border-radius: 10px;
+
+    border: 1px solid #93c5fd;
+
+    color: #1e40af;
 }
 
 .resultado-vazio span {
+
     font-size: 2rem;
+
     display: block;
+
     margin-bottom: 8px;
 }
 
-/* Estilo para os cards de times gerados pelo JS */
+
+/* =========================================
+   CARDS DOS TIMES
+========================================= */
+
 .time-card {
-    background: white;
-    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f0fdf4
+        );
+
+    border-radius: 10px;
+
     overflow: hidden;
-    border: 2px solid #ddd;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+
+    border: 2px solid #86efac;
+
+    box-shadow:
+        0 6px 15px rgba(0,0,0,0.08);
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
 }
+
+.time-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,0.15);
+}
+
+
+/* =========================================
+   TÍTULO DOS TIMES
+========================================= */
 
 .time-card h3 {
+
     color: white;
-    padding: 10px 15px;
+
+    padding: 11px 15px;
+
     font-size: 1rem;
+
     text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #10b981,
+            #059669
+        );
 }
 
+
+/* =========================================
+   JOGADORES DO TIME
+========================================= */
+
 .time-card ul {
+
     list-style: none;
+
     padding: 12px 15px;
 }
 
 .time-card li {
-    padding: 6px 0;
-    border-bottom: 1px solid #f0f0f0;
+
+    padding: 7px 0;
+
+    border-bottom:
+        1px solid #d1fae5;
+
     font-size: 0.9rem;
+
+    color: #14532d;
 }
 
 .time-card li:last-child {
+
     border-bottom: none;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+
+        border-radius: 16px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group button {
+        width: 100%;
+    }
+
+    .acoes-lote {
+        flex-direction: column;
+    }
+
+    .btn-secundario,
+    .btn-perigo {
+        width: 100%;
+    }
+
+    .teams-grid {
+        grid-template-columns: 1fr;
+    }
 }
